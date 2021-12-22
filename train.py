@@ -26,8 +26,6 @@ data_set = ImageFolder('dataset/train',transform=transform_train )
 classes = data_set.classes
 print(classes)
 
-exit()
-
 
 class CNN(torch.nn.Module):
 
@@ -81,8 +79,8 @@ model = CNN().to(device)
 criterion = torch.nn.CrossEntropyLoss().to(device)    # 비용 함수에 소프트맥스 함수 포함되어져 있음.
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
 
-training_epochs = 1
-batch_size = 100
+training_epochs = 100
+batch_size = 10
 
 data_loader = torch.utils.data.DataLoader(data_set, batch_size = batch_size, shuffle = True )
 total_batch = len(data_loader)
