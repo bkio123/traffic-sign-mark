@@ -112,5 +112,4 @@ if not os.path.exists(dirname):
     os.mkdir(dirname)
 
 torch.save(model, dirname + 'model.pt')  # 전체 모델 저장
-torch.save(model.state_dict(), dirname + 'model_state_dict.pt')  # 모델 객체의 state_dict 저장
-torch.save()
+#torch.save(model.state_dict(), dirname + 'model_state_dict.pt')  # 모델 객체의 state_dict 저장

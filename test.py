@@ -21,11 +21,12 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print(device)
 model = CNN()
 model = torch.load('weights/model.pt')
+#model.load_state_dict(torch.load('weights/model_state_dict.pt'))
 print(model)
 
-model.load_state_dict(torch.load('weights/model_state_dict.pt'))
 model.to(device)
 model.eval()
+
 
 files = glob.glob('dataset/train/01/*.png')
 print(len(files))
